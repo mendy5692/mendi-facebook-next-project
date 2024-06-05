@@ -1,0 +1,369 @@
+
+.profile-box {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: calc(100vh - var(--nav-height));
+  width: 100vw;
+  background-color: var(--background-color);
+  overflow-y: scroll;
+  top: var(--nav-height);
+
+}
+
+.profile-box::-webkit-scrollbar {
+   
+  width: 1vh; /* Set the width of the scrollbar */
+  background-color: #f5f5f5; /* Set the background color of the scrollbar */
+  position: absolute;
+  right: 0; /* Position the scrollbar on the right of the element*/
+}
+.profile-box::-webkit-scrollbar-thumb {
+  background-color: #1c2822; /* Set the color of the thumb */
+}
+
+.inner-profile-box {
+
+  /* position: relative; */
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: solid; */
+}
+
+
+
+.background-picture {
+  height: 50%;
+  width: 100%;
+  /* border: solid; */
+  
+}
+
+.information-box {
+  
+  display: flex;
+  flex-direction: row;
+  height: 50%;
+  width: 100%;
+  margin-top: 5%;
+  /* border: solid; */
+  align-items: center;
+  row-gap: 10%;
+  gap: 5%;
+  justify-content: space-between;
+  border-bottom: slategrey solid;
+  padding-bottom: 2%;
+}
+
+.profile-picture {
+  border-radius: 50%;          /* Makes the image circular */
+  width: 17%;                  /* Sets the width to 20% of its container */
+  aspect-ratio: 1 / 1;         /* Ensures the aspect ratio remains 1:1 */
+  object-fit: cover;           /* Ensures the image covers the entire element without distortion */
+  border: 1% solid #242526;   /* Adds a subtle border matching Facebook's dark mode theme */
+  background-color: #3a3b3c;   /* Fallback background color for when image fails to load */
+}
+
+.personal-information {
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40%;
+  height: 100%;
+  font-size: 1rem;
+  color: #e4e6eb; /* Light text color */
+}
+
+.name-and-freinds {
+  margin: 0;
+}
+
+.mutual-freinds-pictures {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* Space between friend pictures */
+}
+
+.mutual-freind-picture {
+  height: 2.5rem; /* Adjust size for profile pictures */
+  width: 2.5rem; /* Ensure aspect ratio is 1/1 */
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.mutual-freind-picture:hover {
+  transform: scale(1.5); /* Enlarge picture on hover */
+  z-index: 1;
+}
+
+
+.out-buttons-box {
+  
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-end;
+  width: 40%;
+  height: 100%;
+}
+
+.buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.invite-button, .message-button, .expnd-more-button {
+  width: 80%;
+  height: 40%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  background-color: #3a3b3c; /* Dark button background */
+  color: #e4e6eb; /* Light text color */
+  font-size: 1.3vw; /* Button text size */
+  transition: background-color 0.3s ease; /* Smooth hover transition */
+
+}
+
+
+
+.invite-button:hover, .message-button:hover, .expnd-more-button:hover {
+  background-color: #4e4f50; /* Lighter shade on hover */
+}
+
+
+.invite-button p, .message-button p, .expnd-more-button p {
+width: 100%;
+height: 100%;
+overflow-wrap: break-word; /* לוודא שהמילים יישברו גם כן */
+white-space: normal; /* לאפשר לטקסט לשבור שורות */  
+}
+
+.add-friend-request, .message-button, .expand-more-button {
+  font-size: 1.5rem; /* Adjust icon size */
+}
+
+/* Specific adjustments for icons inside buttons */
+.invite-button .add-friend-request, .message-button .message-button, .expnd-more-button .expand-more-button {
+  margin-right: 0.5rem; /* Space between icon and text */
+}
+
+
+.add-freind-request {
+font-size: 3vw;
+}
+
+.message-button {
+  font-size:3vw;
+}
+
+
+.expnd-more-button {
+  background-color: rgba(101, 96, 96, 0.377);
+  width: 20%;
+  cursor: pointer;
+}
+
+.profile-nav {
+  display: flex;
+  flex-direction: row;
+  width: 95%;
+  height: 10%;
+  /* border: solid; */
+  color: #f5f5f5;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.rhight-nav button {
+  color: #f5f5f5;
+}
+
+.expand-more-button-three-points {
+  background-color: rgba(101, 96, 96, 0.377);
+  color: #f5f5f5;
+}
+.user-posts {
+  display: flex;
+  flex-direction: row-reverse;
+  border: 0.5% solid #3a3b3c; /* Dark mode border color */
+  width: 66.5%;
+  height: 100%;
+  margin-top: 3%;
+  justify-content: flex-end;
+  background-color: var(--background-color); /* Dark mode background color */
+}
+
+/* Container for nine pictures and friends */
+.nine-pictures-and-freinds {
+  width: 25%;
+  right: 0;
+}
+
+/* Container for the grid of nine pictures */
+.nine-pictures {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  width: 100%;
+  aspect-ratio: 1/1;
+  border: 0.5% solid #3a3b3c; /* Dark mode border color */
+}
+
+/* Styling for each picture button */
+.nine-pictures button {
+  width: 100%;
+  border: 1px solid #3a3b3c; /* Dark mode border color */
+  cursor: pointer;
+  padding: 5%;
+  z-index: 1;
+  background-color: #000; /* Black background */
+  transition: width 0.3s ease; /* Smooth hover effect transition */
+}
+
+/* Hover effect for picture buttons */
+.nine-pictures button:hover {
+  width: 120%; /* Enlarge the button on hover */
+  z-index: 2;
+}
+
+/* Styling for images within picture buttons */
+.nine-pictures img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+
+
+
+.user-posts-box {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  height: 100%;
+  align-items: center;
+  overflow-y: scroll;
+  /* gap: 20px; */
+  background-color: #18191a;
+  padding-top: 20px;
+  /* padding-right: 20px;Add padding to the right to preserve space for images */
+}
+
+.user-post-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #18191a; /* Adjust to match Facebook's dark mode */
+  border-radius: 8px;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75); /* Add a subtle shadow for depth */
+}
+
+.out-user-top-post-box{
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  width: 100%; /* Adjust width as needed */
+  border-bottom: 1px solid #3a3b3c; /* Dark mode border color */
+  margin-bottom: 4%;
+}
+
+.out-user-top-post-box p{
+  color: #ffffff82; /* Set text color */
+  /* font-weight: bold; */
+}
+
+.user-top-post-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%; /* Adjust width as needed */
+  padding-bottom: 10px; /* Add padding bottom for separation */
+  /* border-bottom: 1px solid #3a3b3c; */
+}
+
+
+.user-brief-introduction {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.user-brief-introduction img.avatar {
+  width: 40px; /* Adjust avatar size as needed */
+  height: 40px; /* Adjust avatar size as needed */
+  border-radius: 50%; /* Make avatar circular */
+  margin-right: 10px; /* Add margin for spacing */
+}
+
+.user-brief-introduction p {
+  color: #ffffff; /* Set text color */
+  font-weight: bold; /* Set font weight as needed */
+}
+
+.user-brief-introduction {
+  display: flex;  
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start; /* Adjust justification as needed */
+  margin-bottom: 10px; /* Add margin bottom for separation */
+}
+
+.user-post-picture {
+  width: 100%; /* Adjust width as needed */
+  max-height: 300px; /* Set maximum height for the post picture */
+  object-fit: cover; /* Ensure the picture covers the container */
+}
+
+.user-post-content {
+  border-bottom: 1px solid #3a3b3c; /* Dark mode border color */
+  width: 100%; /* Adjust width as needed */
+  padding: 10px; /* Add padding for content */
+  margin-top: 10px; /* Add margin top for separation */
+  color: #ffffff; /* Set text color */
+}
+
+.user-comments {
+  display: flex;
+  flex-direction: row;
+  width: 100%; /* Adjust width as needed */
+  justify-content: space-between;
+  border-bottom: 1px solid #3a3b3c; /* Dark mode border color */
+  padding: 10px 0; /* Adjust padding as needed */
+}
+
+.user-comments-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px; /* Adjust gap between icon and text */
+  background-color: #242526; /* Dark mode background color */
+  color: #ffffff; /* Set text color */
+  border: none;
+  cursor: pointer;
+  padding: 8px 16px; /* Adjust padding as needed */
+  border-radius: 5px; /* Add border radius for rounded corners */
+  transition: background-color 0.3s ease; /* Add transition effect */
+}
+
+.user-comments-button:hover {
+  background-color: #3a3b3c; /* Dark mode background color on hover */
+}
+
+a {
+  text-decoration: none;
+}
+

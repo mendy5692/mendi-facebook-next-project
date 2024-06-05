@@ -1,0 +1,98 @@
+.chatBox-container {
+  width: 100%;
+  height: calc(100vh - var(--nav-height));
+  background-color: #18191a; /* Dark background color */
+  color: #fff;
+  overflow-y: scroll; /* Enable vertical scroll */
+  position: relative;
+  top: var(--nav-height);
+}
+
+.chatBox-top {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+}
+
+/* .chatBox-left {
+  display: flex;
+  align-items: center;
+} */
+
+.btn-chatBox-img {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-chatBox-img img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.search-input2 {
+  /* display: flex;
+  justify-content: start; */
+  height: 30px;
+  width: 100%;
+  border-radius: 20px;
+  background-color: #303030; /* Darker background color for input */
+  border: none;
+  padding: 8px 16px;
+  color: #fff;
+}
+
+.search-input2 input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  flex-grow: 1;
+}
+
+.close-icon {
+  color: rgb(59, 89, 152);
+  height: 40px;
+  width: 50px;
+}
+
+.chatBox-middel {
+  width: 500px;
+  height: 67vh;
+}
+
+.chatBox-button button {
+  background-color: #18191a;
+  border: none;
+}
+
+.addPhoto-icon {
+  margin-right: 10px;
+  margin-left: 20px;
+  color: #fff;
+  height: 40px;
+  width: 40px;
+}
+
+.chatBox-button-input {
+  display: none;
+}
+.sendIcon {
+  margin-left: 10px;
+  margin-right: 10px;
+  color: #fff;
+  height: 40px;
+  width: 40px;
+}
+
+.message {
+  width: 100%;
+}
+
+.right {
+  justify-content: flex-end;
+}
